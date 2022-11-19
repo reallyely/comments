@@ -1,11 +1,11 @@
 import { IPersistence } from "./model";
-import { Result } from "types-ddd";
+import { Result, Entity } from "types-ddd";
 
 interface Mapper<T> {
   fromPersistence(item: string): Result<T>
 }
 
-export class LocalStoragePersistence<T> implements IPersistence<T> {
+export class LocalStoragePersistence<T extends Entity<any>> implements IPersistence<T> {
   public localStorage: Storage
   public tMapper: Mapper<T>
   constructor(windowLocalStorage: Storage, tClass: Mapper<T>) {
