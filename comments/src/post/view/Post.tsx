@@ -8,6 +8,7 @@ import { CommentEntity } from "@/modules/Comment/CommentEntity"
 import { Comments } from "@/modules/Comment/Comments"
 import { CreateComment } from "@/modules/Comment/CreateComment"
 import { UserContext } from "@/modules/Author/UserContext";
+import { Reaction } from "@/modules/Reaction/Reaction"
 
 interface PostProps {
   author: AuthorEntity
@@ -16,10 +17,15 @@ interface PostProps {
 }
 export function Post(props: PostProps) {
   const [comments, updateComments] = useState([])
+  const [reactions, updateReactions] = useState({ hype: 0 })
   const author = useContext(UserContext)
   const handleCreateComment = (commentValue: string) => {
-
     updateComments([...comments, CommentEntity.create({ content: commentValue, author })])
+  }
+  const handleUpdateReaction = (type: "hype") => (e) => {
+    const newReactions = reactions[type] ? reactions[type]++ : 1
+
+    updateReactions(Object.assign(reactions[type] = newReactions, reactions))
   }
   return <Card>
     <Stack>
@@ -30,6 +36,7 @@ export function Post(props: PostProps) {
       ></Author>
       <Typography variant="body1" sx={{ fontFamily: "Open Sans", fontSize: "12px" }}>{props.content}</Typography>
       <CreateComment handleCreateComment={handleCreateComment} />
+      <Reaction handleReaction={handleUpdateReaction} reactions={reactions ?? reactions} />
       <Comments comments={comments ?? comments} />
     </Stack>
   </Card>
