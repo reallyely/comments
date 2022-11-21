@@ -1,6 +1,10 @@
 import { Post } from "@/post/view"
-export function Posts(props) {
+import { PostEntity } from "../mapping/PostEntity"
+interface PostsProps {
+  posts: Array<PostEntity>
+}
+export function Posts(props: PostsProps) {
   return <div>Posts
-    {props.posts.map(Post)}
+    {props.posts.map((props) => <Post {...props} key={props.id} />)}
   </div>
 }
