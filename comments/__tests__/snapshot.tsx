@@ -1,14 +1,23 @@
-// import { render } from '@testing-library/react'
-// import Home from '@/pages/index'
-
-// it.skip('renders homepage unchanged', () => {
-//   const { container } = render(<Home />)
-//   expect(container).toMatchSnapshot()
-// })
+import { PostEntity } from '@/modules/Post/PostEntity'
 import { render } from '@testing-library/react'
-import { CreatePost } from '@/post/view'
+import { CreatePost, Posts } from '@/modules/Post/view/'
+// Shim for uid creation in entities
+import crypto from "crypto";
+Object.defineProperty(global, 'crypto', {
+  value: {
+    getRandomValues: (arr: any) => crypto.randomBytes(arr.length)
+  }
+});
 
-it('UI Matches the Figma designs', () => {
-  const { container } = render(<CreatePost />)
-  expect(container).toMatchSnapshot()
+describe("UI Matches Figma designs", () => {
+  it('Create Post', () => {
+    const { container } = render(<CreatePost />)
+    expect(container).toMatchSnapshot()
+  })
+  it('Posts', () => {
+    const initialPost = PostEntity.createEmpty()
+    const { container } = render(<Posts posts={[initialPost]} />)
+    expect(container).toMatchSnapshot()
+  })
+
 })

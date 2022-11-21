@@ -21,10 +21,10 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": [
-        "components/*"
+        "src/shared/components/*"
       ],
-      "@/post/*": [
-        "src/post/*"
+      "@/modules/*": [
+        "src/*"
       ],
       "@/persistence/*": [
         "src/shared/persistence/*"

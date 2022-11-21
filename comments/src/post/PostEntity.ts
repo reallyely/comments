@@ -1,11 +1,12 @@
-import { CommentEntity } from "./CommentEntity"
-import { AuthorEntity } from "./AuthorEntity"
+import { CommentEntity } from "@/modules/Comment/CommentEntity"
+import { AuthorEntity } from "@/modules/Author/AuthorEntity"
 import { AggregateRoot } from "@/core/Aggregate";
 
 interface PostProps {
   content: string;
   author: AuthorEntity
   comments: Array<CommentEntity>
+  dateCreated?: Date
 }
 
 interface PostPropsFromView {
@@ -13,17 +14,17 @@ interface PostPropsFromView {
   author: AuthorEntity
 }
 
-
 export class PostEntity extends AggregateRoot<PostProps> {
   public content: string;
   public author: AuthorEntity
   public comments: Array<CommentEntity>
-
+  public dateCreated: Date
   private constructor(obj: PostProps) {
     super(obj)
     this.content = obj.content
     this.author = obj.author
     this.comments = obj.comments
+    this.dateCreated = new Date()
   }
   public static isValid(obj: any) {
     const mandatoryFields = ["content", "author"]

@@ -1,10 +1,11 @@
 import Head from 'next/head'
-import { Posts, CreatePost } from "@/post/view"
-import { PostEntity } from "@/post/mapping/PostEntity"
+import { Stack } from '@mui/system';
+import { Posts, CreatePost } from "src/Post/view"
+import { PostEntity } from "@/modules/Post/PostEntity"
 import { useState } from 'react';
-import { AuthorEntity } from '@/post/mapping/AuthorEntity';
-import { PortraitEntity } from '@/post/mapping/PortraitEntity';
-import { CommentEntity } from '@/post/mapping/CommentEntity';
+import { AuthorEntity } from '@/modules/Author/AuthorEntity';
+import { PortraitEntity } from '@/modules/Author/PortraitEntity';
+import { CommentEntity } from '@/modules/Comment/CommentEntity';
 
 type PostJSON = string
 interface HomeProps {
@@ -27,8 +28,10 @@ export default function Home(props: HomeProps) {
       </Head>
 
       <main>
-        <CreatePost handleCreatePost={handleCreatePost} />
-        <Posts posts={posts} />
+        <Stack sx={{ gap: "16px" }}>
+          <CreatePost handleCreatePost={handleCreatePost} />
+          <Posts posts={posts} />
+        </Stack>
       </main>
 
       <footer>

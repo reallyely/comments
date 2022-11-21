@@ -1,17 +1,10 @@
-import { TextField, Stack, Container, Button, Box, Card } from "@mui/material";
+import { TextField, Stack, Container, Button, Box } from "@mui/material";
 import { SxProps } from "@mui/system";
 import { ChangeEventHandler, PropsWithChildren, useState } from "react";
-import { AuthorEntity } from "../mapping/AuthorEntity";
+import { AuthorEntity } from "@/modules/Author/AuthorEntity";
+import { Card } from "@/components/Card"
 
-const containerStyles: SxProps = {
-  /* Auto layout */
-  padding: "16px",
-  background: "#FFFFFF",
-  /* eFuse Light/UI Colors/GlobalStroke */
-  border: "1px solid #CED7E7",
-  borderRadius: "10px",
-  boxShadow: "none"
-}
+
 const inputStyles: SxProps = {
   fontWeight: 500,
   fontSize: "14px",
@@ -46,9 +39,7 @@ export function CreatePost(props: PropsWithChildren<CreatePostProps>) {
     }
     updatePostContent("")
   }
-  return <Card sx={
-    containerStyles
-  }>
+  return <Card>
     <Stack sx={{ gap: "16px" }}>
       <TextField
         sx={inputStyles}

@@ -1,4 +1,4 @@
-import { AuthorEntity } from "./AuthorEntity";
+import { AuthorEntity } from "@/modules/Author/AuthorEntity";
 
 interface CommentProps {
   content: string;
