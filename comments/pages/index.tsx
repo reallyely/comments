@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { AuthorEntity } from '@/modules/Author/AuthorEntity';
 import { PortraitEntity } from '@/modules/Author/PortraitEntity';
 import { CommentEntity } from '@/modules/Comment/CommentEntity';
-
+import { UserContext } from "@/modules/Author/UserContext"
 type PostJSON = string
 interface HomeProps {
   currentUser: string
@@ -20,6 +20,7 @@ export default function Home(props: HomeProps) {
     const newPost = PostEntity.fromForm({ content, author: currentUser })
     updatePosts([...posts, newPost])
   }
+
   return (
     <div>
       <Head>
@@ -28,9 +29,11 @@ export default function Home(props: HomeProps) {
       </Head>
 
       <main>
-        <Stack sx={{ gap: "16px" }}>
-          <CreatePost handleCreatePost={handleCreatePost} />
-          <Posts posts={posts} />
+        <Stack>
+          <UserContext.Provider value={currentUser}>
+            <CreatePost handleCreatePost={handleCreatePost} />
+            <Posts posts={posts} />
+          </UserContext.Provider>
         </Stack>
       </main>
 

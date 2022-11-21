@@ -1,15 +1,15 @@
-import { TextField, Stack, Container, Button, Box } from "@mui/material";
-import { SxProps } from "@mui/system";
+import { Box, Button, Container, Stack, TextField } from "@mui/material";
 import { ChangeEventHandler, PropsWithChildren, useState } from "react";
-import { AuthorEntity } from "@/modules/Author/AuthorEntity";
-import { Card } from "@/components/Card"
 
+import { Card } from "@/modules/shared/view/Card"
+import { SxProps } from "@mui/system";
 
 const inputStyles: SxProps = {
   fontWeight: 500,
   fontSize: "14px",
   borderColor: "red",
-  color: "#0A0C1299"
+  color: "#0A0C1299",
+  borderRadius: "8px"
 }
 const submitStyles: SxProps = {
   background: "#006CFA",
@@ -20,7 +20,6 @@ const submitStyles: SxProps = {
 }
 interface CreatePostProps {
   postContent?: string
-  currentUser?: AuthorEntity
   handleUpdatePostContent?(postContent: string): void
   handleCreatePost?(postContent: string): void
 }
@@ -40,7 +39,7 @@ export function CreatePost(props: PropsWithChildren<CreatePostProps>) {
     updatePostContent("")
   }
   return <Card>
-    <Stack sx={{ gap: "16px" }}>
+    <Stack>
       <TextField
         sx={inputStyles}
         value={postContent}
@@ -55,7 +54,7 @@ export function CreatePost(props: PropsWithChildren<CreatePostProps>) {
         }}
       />
       <Stack direction="row" justifyContent="flex-end">
-        <Button sx={submitStyles} variant="contained" type="submit" onClick={submit} >Post</Button>
+        <Button sx={submitStyles} variant="contained" type="submit" onClick={submit}>Post</Button>
       </Stack>
     </Stack >
   </Card>

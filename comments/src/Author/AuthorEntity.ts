@@ -36,6 +36,7 @@ export class AuthorView {
     return new AuthorView({ name: "not here", portraitSource: "blank", postCreated: new Date() })
   }
 }
+
 export class AuthorEntity extends Entity<AuthorProps> {
   name: string;
   portrait: PortraitEntity;

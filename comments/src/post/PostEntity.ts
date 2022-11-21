@@ -24,7 +24,7 @@ export class PostEntity extends AggregateRoot<PostProps> {
     this.content = obj.content
     this.author = obj.author
     this.comments = obj.comments
-    this.dateCreated = new Date()
+    this.dateCreated = obj.dateCreated || new Date()
   }
   public static isValid(obj: any) {
     const mandatoryFields = ["content", "author"]

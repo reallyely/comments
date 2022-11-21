@@ -9,6 +9,13 @@ const withTheme = createTheme({
       main: "#006CFA"
     }
   },
+  components: {
+    MuiStack: {
+      defaultProps: {
+        gap: "16px"
+      }
+    }
+  },
   typography: {
     fontFamily: "Poppins"
   }
