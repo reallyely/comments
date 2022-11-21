@@ -3,11 +3,16 @@ import type { AppProps } from 'next/app'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from "@mui/material/Container";
-import '@fontsource/roboto/300.css';
-
 const withTheme = createTheme({
   palette: {
+    primary: {
+      main: "#006CFA"
+    }
   },
+  typography: {
+    fontFamily: "Poppins"
+  }
+
 });
 export default function MyApp({ Component, pageProps }: AppProps) {
   return <ThemeProvider theme={withTheme}>
