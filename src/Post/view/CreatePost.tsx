@@ -3,6 +3,7 @@ import { ChangeEventHandler, PropsWithChildren, useState } from "react";
 
 import { Card } from "@/modules/shared/view/Card"
 import { SxProps } from "@mui/system";
+import { submitOnEnter } from "@/components/submit";
 
 const inputStyles: SxProps = {
   fontWeight: 500,
@@ -33,10 +34,11 @@ export function CreatePost(props: PropsWithChildren<CreatePostProps>) {
     updatePostContent(event.target.value)
   }
   const submit = () => {
-    if (props.handleCreatePost) {
+
+    if (props.handleCreatePost && postContent.length > 0) {
       props.handleCreatePost(postContent)
+      updatePostContent("")
     }
-    updatePostContent("")
   }
   return <Card>
     <Stack>
@@ -47,11 +49,7 @@ export function CreatePost(props: PropsWithChildren<CreatePostProps>) {
         type="text"
         multiline
         onChange={handleUpdatePostContent}
-        onKeyUp={(e) => {
-          if (e.key === "Enter") {
-            submit()
-          }
-        }}
+        onKeyDown={submitOnEnter(submit)}
       />
       <Stack direction="row" justifyContent="flex-end">
         <Button sx={submitStyles} variant="contained" type="submit" onClick={submit}>Post</Button>

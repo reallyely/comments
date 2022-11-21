@@ -12,8 +12,11 @@ export function CreateComment(props: PropsWithChildren<CreateCommentProps>) {
   const [value, updateCommentValue] = useState("")
 
   const submit = () => {
-    props.handleCreateComment(value)
-    updateCommentValue("")
+    if (value.length > 0) {
+
+      props.handleCreateComment(value)
+      updateCommentValue("")
+    }
   }
   const getEndAdornment = (value: string) => {
     if (value && value.length > 0) {
@@ -43,7 +46,7 @@ export function CreateComment(props: PropsWithChildren<CreateCommentProps>) {
     onChange={(event) => updateCommentValue(event.target.value)}
     multiline
     placeholder="Add comment"
-    onKeyUp={submitOnEnter(submit)}
+    onKeyDown={submitOnEnter(submit)}
     InputProps={{
       disableUnderline: true,
       sx: inputStyleOverrides,
