@@ -1,27 +1,25 @@
-# Next.js + Jest
+# Very very cool Post board
 
-This example shows how to configure Jest to work with Next.js.
+An example of a user post board with limited capabilities.
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
+- There exists an input field for the user to type.
+- There exists a Post button to create a post.
+- On Post click a new post is created below the input section.
+- The UI matches the Figma designs.
+- There exists an input field for the user to type comments.
+- Comments are created when the user pressed the “enter” key.
+- The UI matches the Figma designs.
+- Cannot edit or delete comments
+- There exists a button on posts to “like”.
+- There exists a button on comments to “like”.
+- A user’s like is displayed in the UI.
+- The UI matches the Figma designs.
 
 ## How to Use
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
-
-In your terminal, run the following command:
-
 ```bash
-npx create-next-app --example with-jest with-jest-app
+npm run dev
 ```
-
-```bash
-yarn create next-app --example with-jest with-jest-app
-```
-
-```bash
-pnpm create next-app --example with-jest with-jest-app
-```
-
 ## Run Jest Tests
 
 ```bash
