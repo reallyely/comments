@@ -6,9 +6,10 @@ import { AuthorEntity } from '@/post/mapping/AuthorEntity';
 import { PortraitEntity } from '@/post/mapping/PortraitEntity';
 import { CommentEntity } from '@/post/mapping/CommentEntity';
 
+type PostJSON = string
 interface HomeProps {
   currentUser: string
-  posts: Array<PostEntity>
+  posts: Array<PostJSON>
 }
 export default function Home(props: HomeProps) {
   const initialPosts = props.posts.map(PostEntity.createFromJSON)
@@ -26,9 +27,8 @@ export default function Home(props: HomeProps) {
       </Head>
 
       <main>
-        <CreatePost handleCreatePost={handleCreatePost}></CreatePost>
-        <Posts posts={posts}>
-        </Posts>
+        <CreatePost handleCreatePost={handleCreatePost} />
+        <Posts posts={posts} />
       </main>
 
       <footer>
@@ -49,7 +49,8 @@ export const getServerSideProps = async () => {
   const initialPost = PostEntity.create({ content: "Hello World!", author, comments: [CommentEntity.createEmpty()] })
   return {
     props: {
-      posts: [JSON.stringify(initialPost)], currentUser: JSON.stringify(author)
+      posts: [JSON.stringify(initialPost)],
+      currentUser: JSON.stringify(author)
     }
   }
 }

@@ -14,6 +14,7 @@ const customJestConfig = {
     '^@/persistence/(.*)$': '<rootDir>/src/shared/persistence/$1',
     '^@/post/(.*)$': '<rootDir>/src/post/$1',
     '^@/pages/(.*)$': '<rootDir>/pages/$1',
+    '^@/core/(.*)$': '<rootDir>/src/shared/core/$1',
   },
   testEnvironment: 'jest-environment-jsdom',
 }

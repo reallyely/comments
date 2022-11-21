@@ -1,7 +1,6 @@
-import { Entity } from "../../shared/domain/Entity"
 import { CommentEntity } from "./CommentEntity"
 import { AuthorEntity } from "./AuthorEntity"
-import { AggregateRoot } from "src/shared/domain/Aggregate";
+import { AggregateRoot } from "@/core/Aggregate";
 
 interface PostProps {
   content: string;
@@ -14,9 +13,7 @@ interface PostPropsFromView {
   author: AuthorEntity
 }
 
-export class PostViewModel {
 
-}
 export class PostEntity extends AggregateRoot<PostProps> {
   public content: string;
   public author: AuthorEntity

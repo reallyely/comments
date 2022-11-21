@@ -29,6 +29,9 @@
       "@/persistence/*": [
         "src/shared/persistence/*"
       ],
+      "@/core/*": [
+        "src/shared/core/*"
+      ],
       "@/pages/*": [
         "pages/*"
       ],
