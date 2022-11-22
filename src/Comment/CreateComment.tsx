@@ -6,15 +6,14 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import { submitOnEnter } from "@/modules/shared/view/submit";
 
 interface CreateCommentProps {
-  handleCreateComment(value: string): void
+  handleCreateComment?(value: string): void
 }
 export function CreateComment(props: PropsWithChildren<CreateCommentProps>) {
   const [value, updateCommentValue] = useState("")
 
   const submit = () => {
     if (value.length > 0) {
-
-      props.handleCreateComment(value)
+      if (props.handleCreateComment !== undefined) props.handleCreateComment(value)
       updateCommentValue("")
     }
   }
