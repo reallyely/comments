@@ -1,8 +1,8 @@
 export class Result<T> {
   public isSuccess: boolean;
   public isFailure: boolean
-  private error: T | string;
-  private _value: T;
+  private error: T | string | undefined;
+  private _value: T | undefined;
 
   public constructor(isSuccess: boolean, error?: T | string, value?: T) {
     if (isSuccess && error) {
@@ -26,6 +26,7 @@ export class Result<T> {
       throw new Error("Can't get the value of an error result. Use 'errorValue' instead.")
     }
 
+    // @ts-ignore
     return this._value;
   }
 
@@ -34,7 +35,7 @@ export class Result<T> {
   }
 
   public static ok<U>(value?: U): Result<U> {
-    return new Result<U>(true, null, value);
+    return new Result<U>(true, undefined, value);
   }
 
   public static fail<U>(error: string): Result<U> {

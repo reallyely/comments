@@ -5,7 +5,6 @@ interface PostsProps {
 }
 export function Posts(props: PostsProps) {
   return <>
-    {/* @ts-ignore entity ID is a string but typed */}
-    {props.posts.map((props) => <Post {...props} key={props.id} />)}
+    {props.posts.map((props) => <Post {...props} key={props.id.toValue()} />)}
   </>
 }
