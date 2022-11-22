@@ -34,7 +34,6 @@ export function CreatePost(props: PropsWithChildren<CreatePostProps>) {
     updatePostContent(event.target.value)
   }
   const submit = () => {
-
     if (props.handleCreatePost && postContent.length > 0) {
       props.handleCreatePost(postContent)
       updatePostContent("")

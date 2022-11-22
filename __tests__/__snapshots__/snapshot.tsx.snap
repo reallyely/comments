@@ -105,7 +105,7 @@ exports[`UI Matches Figma designs Posts 1`] = `
           <h6
             class="MuiTypography-root MuiTypography-subtitle2 css-1j750u5-MuiTypography-root"
           >
-            Mon Nov 21 2022
+            Tue Nov 22 2022
           </h6>
         </div>
       </div>
@@ -167,8 +167,9 @@ exports[`UI Matches Figma designs Posts 1`] = `
       <div
         class="css-1gi1ppv-MuiStack-root"
       >
-        <button
+        <a
           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-x2d8bl-MuiButtonBase-root-MuiIconButton-root"
+          href="blank"
           tabindex="0"
           type="button"
         >
@@ -186,7 +187,7 @@ exports[`UI Matches Figma designs Posts 1`] = `
           <span
             class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
           />
-        </button>
+        </a>
          
         0
       </div>
