@@ -6,10 +6,10 @@ exports[`UI Matches Figma designs Create Post 1`] = `
     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-wcws4n-MuiPaper-root-MuiCard-root"
   >
     <div
-      class="css-1ucnu3w-MuiStack-root"
+      class="css-nen11g-MuiStack-root"
     >
       <div
-        class="MuiFormControl-root MuiTextField-root css-pgbb05-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root MuiTextField-root css-9wbkk8-MuiFormControl-root-MuiTextField-root"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
@@ -74,10 +74,10 @@ exports[`UI Matches Figma designs Posts 1`] = `
     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-wcws4n-MuiPaper-root-MuiCard-root"
   >
     <div
-      class="css-1ucnu3w-MuiStack-root"
+      class="css-nen11g-MuiStack-root"
     >
       <div
-        class="css-1kq5d21-MuiStack-root"
+        class="css-1d9cypr-MuiStack-root"
       >
         <div
           class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-11eursh-MuiAvatar-root"
@@ -112,74 +112,87 @@ exports[`UI Matches Figma designs Posts 1`] = `
       <p
         class="MuiTypography-root MuiTypography-body1 css-1vs0me-MuiTypography-root"
       />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`renders CreatePost unchanged 1`] = `
-<div>
-  <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1slgqai-MuiPaper-root-MuiCard-root"
-  >
-    <div
-      class="css-1ucnu3w-MuiStack-root"
-    >
       <div
-        class="MuiFormControl-root MuiTextField-root css-pgbb05-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root MuiTextField-root css-1r3o2d3-MuiFormControl-root-MuiTextField-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for=":r0:"
-          id=":r0:-label"
-        >
-          What's on your mind?
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiInputBase-root MuiFilledInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline MuiInputBase-adornedStart MuiInputBase-adornedEnd css-1u0exat-MuiInputBase-root-MuiFilledInput-root"
         >
+          <div
+            class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-filled MuiInputAdornment-sizeMedium css-jv61v3-MuiInputAdornment-root"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16atndd-MuiSvgIcon-root"
+              data-testid="ChatBubbleOutlineIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+              />
+            </svg>
+          </div>
           <textarea
             aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input"
-            id=":r0:"
+            class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMultiline MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd css-7209ej-MuiInputBase-input-MuiFilledInput-input"
+            id=":r1:"
+            placeholder="Add comment"
             style="height: 0px; overflow: hidden;"
           />
           <textarea
             aria-hidden="true"
-            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input"
+            class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMultiline MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd css-7209ej-MuiInputBase-input-MuiFilledInput-input"
             readonly=""
             style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding: 0px; width: 100%;"
             tabindex="-1"
           />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <div
+            class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-filled MuiInputAdornment-sizeMedium css-jv61v3-MuiInputAdornment-root"
           >
-            <legend
-              class="css-yjsfm1"
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16atndd-MuiSvgIcon-root"
+              data-testid="AddCircleOutlineIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <span>
-                What's on your mind?
-              </span>
-            </legend>
-          </fieldset>
+              <path
+                d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <div
-        class="css-181c0ax-MuiStack-root"
+        class="css-1gi1ppv-MuiStack-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-10p7b8c-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-x2d8bl-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
-          type="submit"
+          type="button"
         >
-          Post
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="WhatshotIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"
+            />
+          </svg>
           <span
             class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
           />
         </button>
+         
+        0
       </div>
+      <div
+        class="css-1p5q5e5-MuiStack-root"
+      />
     </div>
   </div>
 </div>

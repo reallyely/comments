@@ -1,13 +1,7 @@
+import { CreatePost, Posts } from '@/modules/Post/view/'
+
 import { PostEntity } from '@/modules/Post/PostEntity'
 import { render } from '@testing-library/react'
-import { CreatePost, Posts } from '@/modules/Post/view/'
-// Shim for uid creation in entities
-import crypto from "crypto";
-Object.defineProperty(global, 'crypto', {
-  value: {
-    getRandomValues: (arr: any) => crypto.randomBytes(arr.length)
-  }
-});
 
 describe("UI Matches Figma designs", () => {
   it('Create Post', () => {

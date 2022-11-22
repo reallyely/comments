@@ -3,7 +3,7 @@ import { ChangeEventHandler, PropsWithChildren, useState } from "react";
 
 import { Card } from "@/modules/shared/view/Card"
 import { SxProps } from "@mui/system";
-import { submitOnEnter } from "@/components/submit";
+import { submitOnEnter } from "@/modules/shared/view/submit";
 
 const inputStyles: SxProps = {
   fontWeight: 500,

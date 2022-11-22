@@ -1,7 +1,10 @@
 import { render, screen } from '@testing-library/react'
+
+import { CreatePost } from '@/modules/Post/view'
 import userEvent from '@testing-library/user-event'
-import { CreatePost } from 'src/Post/view'
+
 const testPostContent = "Hey this is a really cool description of stuff I like! get rekt"
+
 describe('Home', () => {
   it('Doesnt Explode', () => {
     render(<CreatePost />)
