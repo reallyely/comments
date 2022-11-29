@@ -27,6 +27,6 @@ const reactionStyles = (reactions: { hype: number; }) => ({
 export function Reaction(props: PropsWithChildren<ReactionProps>) {
 
   return <Stack direction="row" justifyContent="flex-start">
-    <IconButton sx={reactionStyles(props.reactions)} onClick={props.handleReaction} type="button"><WhatshotIcon></WhatshotIcon></IconButton> {props.reactions.hype}
+    <IconButton href="" sx={reactionStyles(props.reactions)} onClick={props.handleReaction} type="button"><WhatshotIcon></WhatshotIcon></IconButton> {props.reactions.hype}
   </Stack >
 }
